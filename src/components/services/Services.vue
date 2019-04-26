@@ -51,7 +51,6 @@
     <vuestic-modal
       ref="deleteModal"
       okText="Deletar"
-      :onOk="deleteService()"
       cancelText="Cancelar"
     >
       <div slot="title">Deletar Serviço</div>
