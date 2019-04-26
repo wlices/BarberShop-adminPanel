@@ -12,10 +12,12 @@
         :key="option.name"
         class="dropdown-item plain-link-item"
       >
-        <router-link :to="{name: option.redirectTo}" class="plain-link"
-                     href="#">
+        <span
+          class="plain-link"
+          @click.prevent="logout()"
+        >
           {{ $t(`user.${option.name}`) }}
-        </router-link>
+        </span>
       </div>
     </vuestic-dropdown>
   </div>
@@ -40,6 +42,14 @@ export default {
       ],
     },
   },
+  methods: {
+    logout() {
+      const that = this
+      this.$store.dispatch('LogOut').then(() => {
+        location.reload()
+      })
+    },
+  }
 }
 </script>
 

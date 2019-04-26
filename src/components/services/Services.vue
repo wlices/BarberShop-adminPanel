@@ -25,9 +25,12 @@
                 <td>{{ service.description }}</td>
                 <td align="right">
                   <div>
-                    <button class="btn btn-info btn-micro">
+                    <router-link
+                      class="btn btn-info btn-micro"
+                      :to="{ name: 'update-service', params: { id: service._id }}"
+                    >
                       Alterar
-                    </button>
+                    </router-link>
                     <button
                       class="btn btn-danger btn-micro"
                       style="margin-left: 2%;"
