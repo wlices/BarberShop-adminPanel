@@ -49,7 +49,7 @@
     </div>
 
     <vuestic-modal
-      :show.sync="show" ref="deleteModal"
+      ref="deleteModal"
       okText="Deletar"
       :onOk="deleteService()"
       cancelText="Cancelar"

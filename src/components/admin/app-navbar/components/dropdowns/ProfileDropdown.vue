@@ -14,6 +14,7 @@
       >
         <span
           class="plain-link"
+          style="cursor: pointer;"
           @click.prevent="logout()"
         >
           {{ $t(`user.${option.name}`) }}
