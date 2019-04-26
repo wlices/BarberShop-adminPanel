@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="d-flex align--center justify--center">
-        <button class="btn btn-primary" type="submit">
+        <button class="btn btn-primary" @click.prevent="handleLogin()">
           {{ $t('auth.login') }}
         </button>
       </div>

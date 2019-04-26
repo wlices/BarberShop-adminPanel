@@ -42,6 +42,7 @@
                     <button
                       class="btn btn-info btn-sm"
                       style="margin-bottom: 35px; margin-left: 2%;"
+                      @click.prevent="putServices()"
                     >
                       Atualizar
                     </button>

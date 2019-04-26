@@ -42,6 +42,7 @@
                     <button
                       class="btn btn-primary btn-sm"
                       style="margin-bottom: 35px; margin-left: 2%;"
+                      @click.prevent="postServices()"
                     >
                       Criar
                     </button>
