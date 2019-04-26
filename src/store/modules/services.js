@@ -16,7 +16,7 @@ const services = {
   actions: {
     getServices({ commit }) {
       return new Promise((resolve, reject) => {
-        getOrders().then(response => {
+        getServices().then(response => {
           commit('SET_SERVICES', response.data)
         })
 
