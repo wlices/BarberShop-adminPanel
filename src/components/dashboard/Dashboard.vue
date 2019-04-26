@@ -1,29 +1,13 @@
 <template>
   <div class="dashboard">
-
-    <dashboard-info-widgets></dashboard-info-widgets>
-
-    <vuestic-widget class="no-padding no-v-padding">
-      <vuestic-tabs
-        :names="[$t('dashboard.dataVisualization'), $t('dashboard.usersAndMembers'), $t('dashboard.setupProfile'), $t('dashboard.features')]"
-        ref="tabs">
-        <div :slot="$t('dashboard.dataVisualization')">
-          <data-visualisation-tab></data-visualisation-tab>
-        </div>
-        <div :slot="$t('dashboard.usersAndMembers')">
-          <users-members-tab></users-members-tab>
-        </div>
-        <div :slot="$t('dashboard.setupProfile')">
-          <setup-profile-tab></setup-profile-tab>
-        </div>
-        <div :slot="$t('dashboard.features')">
-          <features-tab></features-tab>
-        </div>
-      </vuestic-tabs>
-    </vuestic-widget>
-
-    <dashboard-bottom-widgets></dashboard-bottom-widgets>
-
+    <div class="flex md12">
+      <vuestic-widget
+        class="primary-secondary-buttons larger-padding"
+        headerText="Dashboard"
+      >
+        <span>Bem vindo a nossa Dashboard, estamos aprimorando a mesma para entregar um excelente produto aos clientes.</span>
+      </vuestic-widget>
+    </div>
   </div>
 </template>
 

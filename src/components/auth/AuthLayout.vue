@@ -14,8 +14,8 @@
       <div class="auth-layout__auth-wallpaper flex md6">
         <div class="flex-center">
           <div class="auth-layout__auth-wallpaper__cross-line"/>
-          <router-link class="auth-layout__auth-wallpaper__logo" :to="{path: '/'}">
-            <vuestic-icon-vuestic/>
+          <router-link class="auth-layout__auth-wallpaper__logo flex-center" :to="{path: '/'}">
+            <img style="width: 450px;" src="@/assets/imgs/logo.png">
           </router-link>
         </div>
       </div>

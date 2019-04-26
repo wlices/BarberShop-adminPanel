@@ -17,15 +17,6 @@
         {{ $t(item.displayName) }}
       </router-link>
     </div>
-    <div class="vuestic-breadcrumbs__help-section">
-      <a
-        target="_blank"
-        :href="currentRoute"
-        class="btn btn-micro btn-info"
-      >
-        <span class="vuestic-icon vuestic-icon-files"/>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -55,9 +46,6 @@ export default {
       }
 
       return foundBreadcrumbs
-    },
-    currentRoute () {
-      return this.$route.meta.wikiLink || 'https://github.com/epicmaxco/vuestic-admin/wiki'
     },
   },
   methods: {

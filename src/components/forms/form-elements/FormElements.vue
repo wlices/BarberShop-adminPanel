@@ -4,7 +4,6 @@
       <div class="flex md12">
         <vuestic-widget :headerText="'forms.inputs.title' | translate">
           <form>
-
             <div class="va-row">
               <div class="flex md4">
                 <fieldset>

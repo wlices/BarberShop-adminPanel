@@ -9,6 +9,20 @@ export const breadcrumbs = {
       displayName: 'menu.dashboard',
     },
     {
+      name: 'services',
+      displayName: 'Serviços',
+      children: [
+        {
+          name: 'create-service',
+          displayName: 'Criar Serviço'
+        },
+        {
+          name: 'update-service',
+          displayName: 'Atualizar Serviço'
+        }
+      ]
+    },
+    {
       name: 'statistics',
       displayName: 'menu.statistics',
       disabled: true,
