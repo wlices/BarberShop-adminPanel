@@ -7,7 +7,7 @@ export function loginByEmail(email, password) {
   }
 
   return request({
-    url: '/user/authenticate',
+    url: 'http://localhost:3000/users/authenticate',
     method: 'post',
     data
   })
