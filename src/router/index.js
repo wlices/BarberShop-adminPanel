@@ -17,6 +17,8 @@ import Services from '@/components/services/Services'
 import CreateService from '@/components/services/CreateService'
 import UpdateService from '@/components/services/UpdateService'
 
+// import Reports from '@/components/services/Reports'
+
 /* Pages */
 import Page404 from '@/components/errorPage/404'
 
@@ -28,13 +30,13 @@ export const constantRouterMap = [
       {
         name: 'login',
         path: 'login',
-        component: Login,
+        component: Login
       },
       {
         path: '',
-        redirect: { name: 'login' },
-      },
-    ],
+        redirect: { name: 'login' }
+      }
+    ]
   },
   {
     path: '/authredirect',
@@ -53,25 +55,31 @@ export const constantRouterMap = [
         name: 'dashboard',
         path: 'dashboard',
         component: Dashboard,
-        default: true,
+        default: true
       },
       {
         name: 'services',
         path: 'services',
         component: Services,
-        default: true,
+        default: true
       },
+      // {
+        // name: 'reports',
+        // path: 'reports',
+        // component: Reports,
+        // default: true
+      // },
       {
         name: 'create-service',
         path: 'services/create',
         component: CreateService,
-        default: true,
+        default: true
       },
       {
         name: 'update-service',
         path: 'services/update/:id',
         component: UpdateService,
-        default: true,
+        default: true
       }
     ]
   },

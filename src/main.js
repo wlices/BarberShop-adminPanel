@@ -1,3 +1,6 @@
+// css requires
+require('vue-flash-message/dist/vue-flash-message.min.css');
+
 // Polyfills
 import 'es6-promise/auto'
 import 'babel-polyfill'
@@ -13,7 +16,9 @@ import VuesticPlugin from '@/vuestic-theme/vuestic-plugin'
 import './i18n'
 import YmapPlugin from 'vue-yandex-maps'
 import './middlewares/permission' // permission control
+import VueFlashMessage from 'vue-flash-message';
 
+Vue.use(VueFlashMessage);
 Vue.use(VuesticPlugin)
 Vue.use(YmapPlugin)
 

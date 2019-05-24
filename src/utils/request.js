@@ -30,7 +30,6 @@ service.interceptors.response.use(
     return response
   },
   error => {
-    console.log(error) // for debug
     return Promise.reject(error)
   })
 

@@ -1,5 +1,6 @@
 <template>
   <div class="auth-layout">
+    <flash-message class="float-message"></flash-message>
     <div class="nav d-lg-none">
       <router-link :to="{path: '/'}">
         <vuestic-icon-vuestic/>
@@ -35,6 +36,13 @@ export default {
 </script>
 
 <style lang="scss">
+.float-message {
+  position:fixed;
+  text-align:center;
+  width: 50%;
+  z-index: 999999;
+}
+
 .auth-layout {
   height: 100vh;
   margin: 0;

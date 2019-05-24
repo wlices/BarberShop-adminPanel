@@ -48,8 +48,14 @@ export default {
           this.$router.push({
             path: '/'
           })
-        }).catch(() => {
+          this.flash('Login realizado com sucesso', 'success', {
+            timeout: 1500
+          })
+        }).catch((error) => {
           this.loading = false
+          this.flash(error.response.data.message, 'error', {
+            timeout: 1500
+          })
         })
       }
     }

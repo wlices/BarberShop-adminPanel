@@ -9,8 +9,8 @@
                 <fieldset>
                   <div class="form-group">
                     <div class="input-group">
-                      <input id="simple-input" required/>
-                      <label class="control-label" v-model="service.name" for="simple-input">
+                      <input id="simple-input" v-model="service.name" required/>
+                      <label class="control-label" for="simple-input">
                         Nome
                       </label>
                       <i class="bar"></i>
@@ -36,9 +36,11 @@
                   </div>
 
                   <div class="flex-center align--center justify--center" style="width: 100%;">
-                    <button class="btn btn-sm" style="margin-bottom: 35px;">
-                      Voltar
-                    </button>
+                    <router-link :to="{ name: 'services'}">
+                      <button class="btn btn-sm" style="margin-bottom: 35px;">
+                        Voltar
+                      </button>
+                    </router-link>
                     <button
                       class="btn btn-info btn-sm"
                       style="margin-bottom: 35px; margin-left: 2%;"
@@ -87,6 +89,13 @@ export default {
     putServices() {
       putServices(this.service, this.$route.params.id).then(response => {
         this.$router.push('/services')
+        this.flash('Serviço atualizado com sucesso', 'success', {
+          timeout: 1500
+        })
+      }).catch((error) => {
+        this.flash(error.response.data.message, 'error', {
+          timeout: 1500
+        })
       })
     }
   }

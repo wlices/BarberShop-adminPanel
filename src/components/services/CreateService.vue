@@ -9,7 +9,7 @@
                 <fieldset>
                   <div class="form-group">
                     <div class="input-group">
-                      <input id="simple-input" v-model="service.name" required/>
+                      <input @keyup.enter.prevent="postServices()" id="simple-input" v-model="service.name" required/>
                       <label class="control-label" for="simple-input">
                         Nome
                       </label>
@@ -18,7 +18,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input id="simple-input" v-model="service.price" required/>
+                      <input @keyup.enter.prevent="postServices()" id="simple-input" v-model="service.price" required/>
                       <label class="control-label" for="simple-input">
                         Preço
                       </label>
@@ -27,7 +27,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input id="simple-input" v-model="service.description" required/>
+                      <input @keyup.enter.prevent="postServices()" id="simple-input" v-model="service.description" required/>
                       <label class="control-label" for="simple-input">
                         Descrição
                       </label>
@@ -36,9 +36,11 @@
                   </div>
 
                   <div class="flex-center align--center justify--center" style="width: 100%;">
-                    <button class="btn btn-sm" style="margin-bottom: 35px;">
-                      Voltar
-                    </button>
+                    <router-link :to="{ name: 'services'}">
+                      <button class="btn btn-sm" style="margin-bottom: 35px;">
+                        Voltar
+                      </button>
+                    </router-link>
                     <button
                       class="btn btn-primary btn-sm"
                       style="margin-bottom: 35px; margin-left: 2%;"
@@ -78,6 +80,10 @@ export default {
     postServices() {
       postServices(this.service).then((response) => {
         this.$router.push('/services')
+      }).catch((error) => {
+        this.flash(error.response.data.message, 'error', {
+          timeout: 1500
+        })
       })
     }
   }

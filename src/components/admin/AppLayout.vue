@@ -1,5 +1,8 @@
 <template>
   <vuestic-layout v-layout>
+    <div class="flex-center">
+      <flash-message class="float-message mg-tp-2"></flash-message>
+    </div>
     <app-navbar :isOpen="opened" @toggle-menu="toggleSidebar"/>
     <app-sidebar :isOpen="opened" @toggle-menu="toggleSidebar"/>
     <main
@@ -58,3 +61,22 @@ export default {
   },
 }
 </script>
+
+<style>
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mg-tp-2 {
+  margin-top: 41px;
+}
+
+.float-message {
+  position:fixed;
+  text-align:center;
+  width: 50%;
+  z-index: 999999;
+}
+</style>
