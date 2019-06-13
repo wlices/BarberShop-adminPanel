@@ -2,14 +2,14 @@ import request from '@/utils/request'
 
 export function getServices() {
   return request({
-    url: 'http://localhost:3000/services',
+    url: '/services',
     method: 'get'
   })
 }
 
 export function getServiceById(serviceId) {
   return request({
-    url: 'http://localhost:3000/services/' + serviceId,
+    url: '/services/' + serviceId,
     method: 'get'
   })
 }
@@ -22,7 +22,7 @@ export function postServices(service) {
   }
 
   return request({
-    url: 'http://localhost:3000/services',
+    url: '/services',
     method: 'post',
     data
   })
@@ -36,7 +36,7 @@ export function putServices(service, serviceId) {
   }
 
   return request({
-    url: 'http://localhost:3000/services/' + serviceId,
+    url: '/services/' + serviceId,
     method: 'put',
     data
   })
@@ -44,7 +44,7 @@ export function putServices(service, serviceId) {
 
 export function deleteServices(serviceId) {
   return request({
-    url: 'http://localhost:3000/services/' + serviceId,
+    url: '/services/' + serviceId,
     method: 'delete'
   })
 }

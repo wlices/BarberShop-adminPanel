@@ -17,7 +17,7 @@ import Services from '@/components/services/Services'
 import CreateService from '@/components/services/CreateService'
 import UpdateService from '@/components/services/UpdateService'
 
-// import Reports from '@/components/services/Reports'
+import Reports from '@/components/reports/Reports'
 
 /* Pages */
 import Page404 from '@/components/errorPage/404'
@@ -63,12 +63,12 @@ export const constantRouterMap = [
         component: Services,
         default: true
       },
-      // {
-        // name: 'reports',
-        // path: 'reports',
-        // component: Reports,
-        // default: true
-      // },
+      {
+        name: 'reports',
+        path: 'reports',
+        component: Reports,
+        default: true
+      },
       {
         name: 'create-service',
         path: 'services/create',

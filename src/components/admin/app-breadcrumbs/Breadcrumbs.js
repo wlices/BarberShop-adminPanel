@@ -23,6 +23,10 @@ export const breadcrumbs = {
       ]
     },
     {
+      name: 'reports',
+      displayName: 'Relatórios',
+    },
+    {
       name: 'statistics',
       displayName: 'menu.statistics',
       disabled: true,

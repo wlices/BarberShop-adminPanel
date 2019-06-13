@@ -17,6 +17,14 @@
           <span>Serviços</span>
         </span>
       </sidebar-link>
+      <sidebar-link
+        :to="{ name: 'reports' }">
+        <span slot="title">
+          <span
+            class="sidebar-menu-item-icon vuestic-icon vuestic-icon-statistics"></span>
+          <span>Relatórios</span>
+        </span>
+      </sidebar-link>
     </template>
   </vuestic-sidebar>
 </template>
